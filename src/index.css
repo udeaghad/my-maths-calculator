@@ -21,8 +21,6 @@ body {
   width: 400px;
   display: grid;
   flex-direction: column;
-
-  /* border: 1px solid black; */
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
