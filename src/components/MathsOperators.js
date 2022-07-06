@@ -1,12 +1,6 @@
 import React from 'react';
 
-// eslint-disable-next-line react/prefer-stateless-function
-class MathsOperators extends React.Component {
-  // eslint-disable-next-line no-useless-constructor
-  constructor(props) {
-    super(props);
-  }
-
+class MathsOperators extends React.PureComponent {
   render() {
     return (
       <div className="operators">
