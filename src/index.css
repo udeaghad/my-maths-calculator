@@ -1,91 +1,91 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .App {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 250px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 250px;
 }
 
 .calc-container {
-    color: red  ;
-    width: 400px;
-    display: grid;
-    flex-direction: column;
-   /* border: 1px solid black; */
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  color: red;
+  width: 400px;
+  display: grid;
+  flex-direction: column;
+
+  /* border: 1px solid black; */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .show-result {
-    grid-area: 1/span 4;
-    text-align: end;
-    height: 50px;
-    font-size: 25px;
-    background-color: gray;
-    color: white;
-    padding-top: 10px;
-    padding-right: 10px;
+  grid-area: 1/span 4;
+  text-align: end;
+  height: 50px;
+  font-size: 25px;
+  background-color: gray;
+  color: white;
+  padding-top: 10px;
+  padding-right: 10px;
 }
 
 .special-fxn {
-    grid-area: 2/span 3;
+  grid-area: 2/span 3;
 }
 
 button {
-    border: 1px solid gray;
+  border: 1px solid gray;
 }
 
 .special-fxn button {
-    width: 33.33333%;
-    height: 100%;
-    font-size: 15px;
+  width: 33.33333%;
+  height: 100%;
+  font-size: 15px;
 }
 
 .digit-btn {
-    grid-area: 3/1/6/4;
+  grid-area: 3/1/6/4;
 }
 
 .digit-btn button {
-    width: 33.33333%;
-    height: 33.33333%;
-    font-size: 15px;
+  width: 33.33333%;
+  height: 33.33333%;
+  font-size: 15px;
 }
 
 .zero-dot {
-    grid-area: 6/1/7/4 ;
+  grid-area: 6/1/7/4;
 }
 
 .zero-btn {
-    width: 66.6667%;
-    height: 100%;
-    font-size: 15px;    
+  width: 66.6667%;
+  height: 100%;
+  font-size: 15px;
 }
 
 .dot-btn {
-    width: 33.3333%;
-    height: 100%;
-    font-size: 15px;
-    font-weight: 900;
+  width: 33.3333%;
+  height: 100%;
+  font-size: 15px;
+  font-weight: 900;
 }
 
 .operators {
   grid-area: 2/4/7/5;
-  
 }
 
 .operators button {
-    width: 100%;
-    height: 20%;
-    font-size: 15px;
-    background-color:#ff9243;
+  width: 100%;
+  height: 20%;
+  font-size: 15px;
+  background-color: #ff9243;
 }

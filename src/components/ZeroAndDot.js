@@ -1,8 +1,7 @@
 import React from 'react';
-import CreateCalculator from './components/Calculator';
 
 // eslint-disable-next-line react/prefer-stateless-function
-class App extends React.Component {
+class ZeroAndDot extends React.Component {
   // eslint-disable-next-line no-useless-constructor
   constructor(props) {
     super(props);
@@ -10,12 +9,12 @@ class App extends React.Component {
 
   render() {
     return (
-
-      <div className="App">
-        <CreateCalculator />
+      <div className="zero-dot">
+        <button type="button" className="zero-btn">0</button>
+        <button type="button" className="dot-btn">.</button>
       </div>
     );
   }
 }
 
-export default App;
+export default ZeroAndDot;
