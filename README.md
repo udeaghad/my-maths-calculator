@@ -2,7 +2,8 @@
 
 # Math magicians: components
 
->This project was done to learn the use React components, React props, and React state.
+>This project was done to learn the use React components, React props, and React state. 
+It was later updated to Handle events in a React app, use React life cycle methods, and understand the mechanism of lifting state up.
 
 ## Built With
 
