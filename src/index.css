@@ -5,7 +5,12 @@
 }
 
 body {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#root {
+  height: 100vh;
+  background-color: #673ab76b;
 }
 
 .App {
@@ -14,6 +19,16 @@ body {
   align-items: center;
   justify-content: center;
   padding: 250px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5%;
+}
+
+.container h3 {
+  width: 30%;
 }
 
 .calc-container {
@@ -30,7 +45,7 @@ body {
   text-align: end;
   height: 50px;
   font-size: 25px;
-  background-color: gray;
+  background-color: #2e6c8a;
   color: white;
   padding-top: 10px;
   padding-right: 10px;
@@ -41,23 +56,33 @@ body {
 }
 
 button {
-  border: 1px solid gray;
+  border: 1px solid #abb5ee;
 }
 
-.special-fxn button {
+button:hover {
+  background-color: #4c77de;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+.btn-fxn {
   width: 33.33333%;
   height: 100%;
   font-size: 15px;
+  background-color: #c3c7e2;
 }
 
 .digit-btn {
   grid-area: 3/1/6/4;
 }
 
-.digit-btn button {
+.btn {
   width: 33.33333%;
   height: 33.33333%;
   font-size: 15px;
+  background-color: #c3c7e2;
 }
 
 .zero-dot {
@@ -68,6 +93,7 @@ button {
   width: 66.6667%;
   height: 100%;
   font-size: 15px;
+  background-color: #c3c7e2;
 }
 
 .dot-btn {
@@ -75,15 +101,16 @@ button {
   height: 100%;
   font-size: 15px;
   font-weight: 900;
+  background-color: #c3c7e2;
 }
 
 .operators {
   grid-area: 2/4/7/5;
 }
 
-.operators button {
+.op-btn {
   width: 100%;
   height: 20%;
   font-size: 15px;
-  background-color: #ff9243;
+  background-color: #658ce9;
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import calculate from './logic/calculate';
+import DigitsBtn from './Digits';
 
 const CreateCalculator = () => {
   const [calculatorWorkingObject, setCalculator] = useState(
@@ -10,54 +11,45 @@ const CreateCalculator = () => {
     },
   );
 
-  const handleClick = (event) => {
-    const buttonName = event.target.innerHTML;
+  const handleClick = (adc) => {
+    const buttonName = adc.target.innerText;
     setCalculator((prevState) => calculate(prevState, buttonName));
   };
 
   const { total, operation, next } = calculatorWorkingObject;
 
   return (
+    <div className="container">
+      <h3>Lets do some maths!</h3>
+      <div className="calc-container">
+        <div className="show-result">
+          {total}
+          {operation}
+          {next}
+        </div>
 
-    <div className="calc-container">
-      <div className="show-result">
-        {total}
-        {operation}
-        {next}
+        <div className="special-fxn">
+          <button className="btn-fxn" type="button" onClick={handleClick}>AC</button>
+          <button className="btn-fxn" type="button" onClick={handleClick}>+/-</button>
+          <button className="btn-fxn" type="button" onClick={handleClick}>%</button>
+        </div>
+
+        <DigitsBtn handleClick={handleClick} />
+
+        <div className="zero-dot">
+          <button type="button" className="zero-btn" onClick={handleClick}>0</button>
+          <button type="button" className="dot-btn" onClick={handleClick}>.</button>
+        </div>
+
+        <div className="operators">
+          <button className="op-btn" type="button" onClick={handleClick}>&#247;</button>
+          <button className="op-btn" type="button" onClick={handleClick}>x</button>
+          <button className="op-btn" type="button" onClick={handleClick}>-</button>
+          <button className="op-btn" type="button" onClick={handleClick}>+</button>
+          <button className="op-btn" type="button" onClick={handleClick}>=</button>
+        </div>
+
       </div>
-
-      <div className="special-fxn">
-        <button type="button" onClick={handleClick}>AC</button>
-        <button type="button" onClick={handleClick}>+/-</button>
-        <button type="button" onClick={handleClick}>%</button>
-      </div>
-
-      <div className="digit-btn">
-        <button type="button" onClick={handleClick}>7</button>
-        <button type="button" onClick={handleClick}>8</button>
-        <button type="button" onClick={handleClick}>9</button>
-        <button type="button" onClick={handleClick}>4</button>
-        <button type="button" onClick={handleClick}>5</button>
-        <button type="button" onClick={handleClick}>6</button>
-        <button type="button" onClick={handleClick}>1</button>
-        <button type="button" onClick={handleClick}>2</button>
-        <button type="button" onClick={handleClick}>3</button>
-
-      </div>
-
-      <div className="zero-dot">
-        <button type="button" className="zero-btn" onClick={handleClick}>0</button>
-        <button type="button" className="dot-btn" onClick={handleClick}>.</button>
-      </div>
-
-      <div className="operators">
-        <button type="button" onClick={handleClick}>&#247;</button>
-        <button type="button" onClick={handleClick}>x</button>
-        <button type="button" onClick={handleClick}>-</button>
-        <button type="button" onClick={handleClick}>+</button>
-        <button type="button" onClick={handleClick}>=</button>
-      </div>
-
     </div>
   );
 };
