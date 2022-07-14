@@ -1,65 +1,72 @@
-import {render, fireEvent} from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import CreateCalculator from './Calculator';
 import calculate from './logic/calculate';
-import operate from './logic/operate'
+import operate from './logic/operate';
+import HomePage from './pages/HomePage';
+import QuotePage from './pages/QuotePage';
 
-describe('To check calculator buttons', () => { 
-test('To make sure the number of buttons are complete', () =>{   
-        const{ getAllByRole} = render(<CreateCalculator />)
-        const button = getAllByRole('button')
-        expect(button).toHaveLength(19)   
-})
-test('To check if correct value is displayed on button click', () => {
-    
-        const {getByTestId} = render(<CreateCalculator />);
-        const showResult= getByTestId('display-result');
-        const btnClick = getByTestId('btn-7')       
-        let getValue = btnClick.innerHTML
-        fireEvent.click(btnClick, {target:{innerText:getValue}});
-        expect(showResult.textContent).toContain('7')
-
-    })
-})
+describe('To check calculator buttons', () => {
+  test('To make sure the number of buttons are complete', () => {
+    const { getAllByRole } = render(<CreateCalculator />);
+    const button = getAllByRole('button');
+    expect(button).toHaveLength(19);
+  });
+  test('To check if correct value is displayed on button click', () => {
+    const { getByTestId } = render(<CreateCalculator />);
+    const showResult = getByTestId('display-result');
+    const btnClick = getByTestId('btn-7');
+    const getValue = btnClick.innerHTML;
+    fireEvent.click(btnClick, { target: { innerText: getValue } });
+    expect(showResult.textContent).toContain('7');
+  });
+});
 
 describe('To test calculator logic functions', () => {
-    test('To test calculate function', () => {
-    
-    let buttonName = '='
+  test('To test calculate function', () => {
+    const buttonName = '=';
 
     const obj = {
-        total: 10,
-        next: 5,
-        operation: '+'
-    }
+      total: 10,
+      next: 5,
+      operation: '+',
+    };
 
-    let totalValue = (calculate(obj, buttonName))
+    const totalValue = (calculate(obj, buttonName));
 
-   const {total} = totalValue
+    const { total } = totalValue;
 
-    expect(total).toBe('15')
+    expect(total).toBe('15');
+  });
 
-    })
+  test('To test the operate fuctions', () => {
+    const obj = {
+      total: 10,
+      next: 5,
+      operation: 'x',
+    };
 
-    test('To test the operate fuctions', () => {
-        const obj = {
-            total: 10,
-            next: 5,
-            operation: 'x'
-        }
+    const { total, next, operation } = obj;
 
-        const{total, next, operation} = obj 
+    const totalValue = operate(total, next, operation);
 
-        let totalValue = operate(total, next, operation)
-        
+    expect(totalValue).toBe('50');
+  });
+});
 
-        expect(totalValue).toBe('50')
-        
-    })
-})
+describe('To do snapshot of the React component', () => {
+  test('To do snapshot of CreateCalculate component', () => {
+    const tree = renderer.create(<CreateCalculator />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 
-describe ('To do snapshot of the React component', () => {
-  test('To do snapshot of create calculate component', () => {
-    const tree = render.create(<CreateCalculator />).JSON();
-    expect(tree).toMatchSnapshot()
-  })
-})
+  test('To do snapshot of HomePage component', () => {
+    const tree = renderer.create(<HomePage />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  test('To do snapshot of QuotePage component', () => {
+    const tree = renderer.create(<QuotePage />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
