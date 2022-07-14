@@ -22,14 +22,14 @@ const CreateCalculator = () => {
     <div className="container">
       <h3>Lets do some maths!</h3>
       <div className="calc-container">
-        <div className="show-result">
+        <div className="show-result" data-testid="display-result">
           {total}
           {operation}
           {next}
         </div>
 
         <div className="special-fxn">
-          <button className="btn-fxn" type="button" onClick={handleClick}>AC</button>
+          <button className="btn-fxn" type="button" onClick={handleClick} data-testid="btn-AC">AC</button>
           <button className="btn-fxn" type="button" onClick={handleClick}>+/-</button>
           <button className="btn-fxn" type="button" onClick={handleClick}>%</button>
         </div>

@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`To do snapshot of the React component To do snapshot of CreateCalculate component 1`] = `
+<div
+  className="container"
+>
+  <h3>
+    Lets do some maths!
+  </h3>
+  <div
+    className="calc-container"
+  >
+    <div
+      className="show-result"
+      data-testid="display-result"
+    >
+      0
+    </div>
+    <div
+      className="special-fxn"
+    >
+      <button
+        className="btn-fxn"
+        data-testid="btn-AC"
+        onClick={[Function]}
+        type="button"
+      >
+        AC
+      </button>
+      <button
+        className="btn-fxn"
+        onClick={[Function]}
+        type="button"
+      >
+        +/-
+      </button>
+      <button
+        className="btn-fxn"
+        onClick={[Function]}
+        type="button"
+      >
+        %
+      </button>
+    </div>
+    <div
+      className="digit-btn"
+    >
+      <button
+        className="btn"
+        data-testid="btn-7"
+        onClick={[Function]}
+        type="button"
+      >
+        7
+      </button>
+      <button
+        className="btn"
+        onClick={[Function]}
+        type="button"
+      >
+        8
+      </button>
+      <button
+        className="btn"
+        onClick={[Function]}
+        type="button"
+      >
+        9
+      </button>
+      <button
+        className="btn"
+        onClick={[Function]}
+        type="button"
+      >
+        4
+      </button>
+      <button
+        className="btn"
+        onClick={[Function]}
+        type="button"
+      >
+        5
+      </button>
+      <button
+        className="btn"
+        onClick={[Function]}
+        type="button"
+      >
+        6
+      </button>
+      <button
+        className="btn"
+        onClick={[Function]}
+        type="button"
+      >
+        1
+      </button>
+      <button
+        className="btn"
+        onClick={[Function]}
+        type="button"
+      >
+        2
+      </button>
+      <button
+        className="btn"
+        onClick={[Function]}
+        type="button"
+      >
+        3
+      </button>
+    </div>
+    <div
+      className="zero-dot"
+    >
+      <button
+        className="zero-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        0
+      </button>
+      <button
+        className="dot-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        .
+      </button>
+    </div>
+    <div
+      className="operators"
+    >
+      <button
+        className="op-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        ÷
+      </button>
+      <button
+        className="op-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        x
+      </button>
+      <button
+        className="op-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        -
+      </button>
+      <button
+        className="op-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        +
+      </button>
+      <button
+        className="op-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        =
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`To do snapshot of the React component To do snapshot of HomePage component 1`] = `
+<div
+  className="HomeContainer"
+>
+  <h2>
+    Welcome to our page!
+  </h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta tempor felis eu mollis. Mauris eget tristique massa. Nullam id mi bibendum, pretium augue in, venenatis metus. Mauris elit mauris, accumsan eget ultricies eget, consequat vel enim. Nam vitae nisl accumsan, ornare nulla a, congue diam. Donec hendrerit turpis nulla, pulvinar scelerisque sapien luctus a. sodales sodales.
+  </p>
+  <br />
+  <p>
+    Quisque ac ultrices nunc. Curabitur risus augue, hendrerit at nulla in, aliquet tempus augue. Mauris tincidunt neque id orci eleifend varius.Nullam at lacus facilisis, congue massa ut, condimentum velit. Fusce ac suscipit nulla. Nulla condimentum turpis non mollis maximus. Ut sodales risus eget lorem suscipit tempus. Nulla sed sagittis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus.Cras non molestie est, eu consectetur ligula.
+  </p>
+</div>
+`;
+
+exports[`To do snapshot of the React component To do snapshot of QuotePage component 1`] = `
+<div
+  className="quoteContainer"
+>
+  <h3>
+    Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding.
+    <br />
+    (William Paul Thurston)10 Jun 2014
+  </h3>
+</div>
+`;
