@@ -56,3 +56,10 @@ describe('To test calculator logic functions', () => {
         
     })
 })
+
+describe ('To do snapshot of the React component', () => {
+  test('To do snapshot of create calculate component', () => {
+    const tree = render.create(<CreateCalculator />).JSON();
+    expect(tree).toMatchSnapshot()
+  })
+})
