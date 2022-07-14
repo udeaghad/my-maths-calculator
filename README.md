@@ -3,7 +3,7 @@
 # Math magicians: components
 
 >This project was done to learn the use React components, React props, and React state. 
-It was later updated to Handle events in a React app, use React life cycle methods, and understand the mechanism of lifting state up. Also, React hook was used to refactor the components. Routing was also implemented for this SPA.
+It was later updated to Handle events in a React app, use React life cycle methods, and understand the mechanism of lifting state up. Also, React hook was used to refactor the components. Routing was also implemented for this SPA. Unit test was performed using Jest.
 
 ## Built With
 
@@ -12,6 +12,9 @@ It was later updated to Handle events in a React app, use React life cycle metho
 - CSS
 ## Live Demo
 
+https://my-maths-calculator.netlify.app/
+
+https://my-maths-calculator.herokuapp.com/
 
 ## Getting Started
 
