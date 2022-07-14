@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const DigitsBtn = ({ handleClick }) => (
   <div className="digit-btn">
-    <button className="btn" type="button" onClick={(event) => handleClick(event)}>7</button>
+    <button className="btn" type="button" onClick={(event) => handleClick(event)} data-testid='btn-7'>7</button>
     <button className="btn" type="button" onClick={(event) => handleClick(event)}>8</button>
     <button className="btn" type="button" onClick={(event) => handleClick(event)}>9</button>
     <button className="btn" type="button" onClick={(event) => handleClick(event)}>4</button>
